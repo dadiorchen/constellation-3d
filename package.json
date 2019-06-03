@@ -1,0 +1,23 @@
+{
+  "name": "constellation-3d",
+  "version": "1.0.0",
+  "description": "a data viewer using 3d constellation style. for data visualization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/deanchen2013/constellation-3d.git"
+  },
+  "keywords": [
+    "3d",
+    "visualization"
+  ],
+  "author": "dadiorchen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deanchen2013/constellation-3d/issues"
+  },
+  "homepage": "https://github.com/deanchen2013/constellation-3d#readme"
+}
