@@ -3,15 +3,15 @@
   "version": "1.0.4",
   "description": "a data viewer using 3d constellation style. for data visualization.",
   "main": "dist/main.js",
-	"files": [
-		"src/**/*.js",
-		"dist/**/*.js"
-	],
+  "files": [
+    "src/**/*.js",
+    "dist/**/*.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src/ -d dist/",
     "prepublish": "npm run build",
-		"webpack"		: "webpack"
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "@babel/polyfill": "^7.4.4",
     "d3-force-3d": "^2.0.1",
     "flow": "^0.2.3",
+    "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "three": "^0.105.1",

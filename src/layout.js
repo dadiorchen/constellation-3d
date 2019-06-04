@@ -51,6 +51,7 @@ export function build(
 ){
 	const nodes		= []
 	const links		= []
+	let group		= 0
 	function goThrough(data : any, parent : any, level : number){
 		data.forEach((node : any) => {
 			const newNode		= {
@@ -58,6 +59,7 @@ export function build(
 				name		: node.name,
 				weight		: node.weight,
 				level		: level,
+				group		: group,
 			}
 			nodes.push(newNode)
 			//link
@@ -70,6 +72,9 @@ export function build(
 			}
 			if(node.children){
 				goThrough(node.children, newNode, level + 1)
+			}
+			if(level === 0){
+				group++
 			}
 		})
 	}
