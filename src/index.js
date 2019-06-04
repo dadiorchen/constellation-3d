@@ -1,1 +1,3 @@
-export {default as Constellation3D}		from './Constellation3D.js'
+//@flow
+import Constellation3D		from './Constellation3D.js'
+export default Constellation3D
