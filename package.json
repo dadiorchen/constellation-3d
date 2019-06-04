@@ -1,10 +1,12 @@
 {
   "name": "constellation-3d",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a data viewer using 3d constellation style. for data visualization.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/ -d dist/",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,24 @@
   "bugs": {
     "url": "https://github.com/deanchen2013/constellation-3d/issues"
   },
-  "homepage": "https://github.com/deanchen2013/constellation-3d#readme"
+  "homepage": "https://github.com/deanchen2013/constellation-3d#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "d3-force-3d": "^2.0.1",
+    "flow": "^0.2.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "three": "^0.105.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-async-to-generator": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-flow": "^6.23.0",
+    "webpack": "^4.32.2"
+  }
 }
