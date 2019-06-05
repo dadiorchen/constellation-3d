@@ -164,7 +164,10 @@ export default class SkillConstellation{
 				var texture = new THREE.TextureLoader().load( this.setting.backgroundPicture );
 				texture.wrapS = THREE.RepeatWrapping;
 				texture.wrapT = THREE.RepeatWrapping;
-				texture.repeat.set( 1, 1 );
+				texture.repeat.set(
+					this.setting.backgroundPictureRepeatHorizontal,
+					this.setting.backgroundPictureRepeatVertical,
+				);
 				this.sceneWebGL.background		= texture
 			}
 		}else{

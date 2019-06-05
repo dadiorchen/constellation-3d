@@ -18,3 +18,4 @@ build
 .next
 /out*
 /pages*
+/static*
