@@ -232,7 +232,10 @@ export default class SkillConstellation{
 				this.setting.cameraObitPositionY,
 				this.setting.cameraObitPositionZ,
 			)
-			this.controls		= new THREE.OrbitControls(this.camera)
+			this.controls		= new THREE.OrbitControls(
+				this.camera,
+				this.setting.container,
+			)
 			//inertia
 			this.controls.enableDamping		= true
 			this.controls.dampingFactor		= 0.1
