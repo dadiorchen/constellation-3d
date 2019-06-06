@@ -1,18 +1,17 @@
 # constellation-3d
 constellation-3d is for data visualization, it looks like constellations in the 
-sky. [Demo](https://bl.ocks.org/deanchen2013/220cdbba695f61d421adcae6cb25b602?ssss123d1) 
+sky. [Demo](https://bl.ocks.org/deanchen2013/220cdbba695f61d421adcae6cb25b602) 
 is here.
 
 # About this component
-I create constellation-3d because I use it to show my skills in 
+I created constellation-3d because I use it to show my skills in 
 [my portfolio site](http://dadiorchen.com). Like this:
 
 [picture]
 
 [picture]
 
-I think it is suitable to show data in which the data nodes have a loose relationship,  such as all the hosts on the Internet, some of them have a 
-connection with others, but some else haven't.  
+I think it is suitable for displaying data in which the data nodes have a loose relationship,  such as all the hosts on the Internet, some of them have a connection with others, but some else haven't.  
 
 It is based on [three.js](http://threejs.org) and 
 [d3-force-3d](https://github.com/vasturiano/d3-force-3d).
@@ -20,13 +19,11 @@ It is based on [three.js](http://threejs.org) and
 # Features
 
 * 3D
-constellation-3d uses a 3d engine [three.js](http://threejs.org), that means 
-you can view the data in a 3d space.
+constellation-3d uses a 3d engine [three.js](http://threejs.org), that means you can view the data in 3d space.
 
 * Support HTML/CSS + JSX
-You can write HTML/CSS to change the appearance of constellation-3d. In order 
-to let user write HTML/CSS in js file, I use React 's JSX as a template engine.
-So to define the appearance of the node in constellation-3d, the code is like:
+You can write HTML/CSS to change the appearance of constellation-3d. In order to let the user write HTML/CSS in js file, I use React 's JSX as a template engine, for more information about JSX, check document [here](https://reactjs.org/docs/introducing-jsx.html)
+So to define the appearance of the node in constellation-3d, the code is like this:
 
 ```js
 <div
@@ -48,18 +45,20 @@ npm install --save constellation-3d
 ```
 with HTML
 ```html
-    <script src='https://unpkg.com/constellation-3d@1.0.6/dist/main.js' ></script>
+    <script src='https://unpkg.com/constellation-3d/dist/main.js' ></script>
     <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 ```
+NOTE, to use constellation-3d in html file, you need to surround the js code with script tag which type is 'text/babel', thats because we need
+write JSX in code.
 
 # API
-The setting for config the behaver and outlook of the component:
+Settings for behaver and appearance of the component:
 
 | Setting | Type | Default | Description | 
 | --- | --- | --- | --- |
-| container | DOM object | none | the DOM div element to mount all the component/canvas, e.g. document.getElementById('container') |
+| container | DOM object | none | the DOM div element to mount the component/canvas, e.g. document.getElementById('container') |
 | isAnimated | boolean | true |  if true, then there is an animation when it shows up |
 | backgroundPicture | URL | none | background picture URL, support PNG, JPEG |  
 | backgroundPictureRepeatHorizontal | number | none | how many time the picture will be repeated in the horizontal direction on the background |
@@ -71,32 +70,31 @@ render the nodes, if = 'THREE', use Three.js 3d model to render the nodes |
 | width | number | none | the width of the component | 
 | height | number | none | the height of the component | 
 | isTextDirectionFixed | boolean | true | if true, the text of nodes will always keep facing to the camera |
-| isAutoRotated | boolean | false | if true, the constellations will rotate automatically | 
+| isAutoRotated | boolean | false | if true, the component will rotate automatically | 
 | autoRotationSpeed | number | 1 | the speed of rotation, the larger the value, the faster the speed | 
 | cameraType | 'orbit' \| 'perspective' | 'orbit' | 'orbit': the camera will rotate around the constellations; 'perspective' : the constellation will rotate around the camera |
 | cameraPerspectivePositionX | number | none | valid in perspective mode, indicates the x-axis coordinates of camera |
 | cameraPerspectivePositionY | number | none | valid in perspective mode, indicates the y-axis coordinates of camera |
 | cameraPerspectivePositionZ | number | none | valid in perspective mode, indicates the z-axis coordinates of camera |
-| cameraPerspectiveAngleX | number | none | valid in perspective mode, indicates the angle along x-axis of camera |
-| cameraPerspectiveAngleY | number | none | valid in perspective mode, indicates the angle along y-axis of camera |
-| cameraPerspectiveAngleZ | number | none | valid in perspective mode, indicates the angle along z-axis of camera |
+| cameraPerspectiveAngleX | number | none | valid in perspective mode, the rotation angle of the camera around the x-axis |
+| cameraPerspectiveAngleY | number | none | valid in perspective mode, the rotation angle of the camera around the y-axis|
+| cameraPerspectiveAngleZ | number | none | valid in perspective mode, the rotation angle of the camera around the z-axis |
 | cameraObitPositionX | number | none | valid in orbit mode, indicates the x-axis coordinates of camera |
 | cameraObitPositionY | number | none | valid in orbit mode, indicates the y-axis coordinates of camera |
 | cameraObitPositionZ | number | none | valid in orbit mode, indicates the z-axis coordinates of camera |
-| cameraObitFrustmSize | number | none | in orbit mode, the distance to camera, the bigger the number, the far away to the camera | 
-| strengthPushAllAway | number | none | strength to push all nodes away |
-| strengthPullToX | number | none | strength to pull all nodes to X coordination |
-| strengthPullToY | number | none | strength to pull all nodes to Y coordination |
-| strengthPullToZ | number | none | strength to pull all nodes to Z coordination |
-| strengthToBounceOtherAway | number | none | strength to bounce all nodes away |
-| textCSS | React component | none | given a react component as template to display a node|
-| textMesh | Three.js model | none | given a Three.js model as template to display a node|
+| cameraObitFrustmSize | number | none | in orbit mode, the nodes distance to camera, the bigger the number, the far away to the camera | 
+| strengthPushAllAway | number | none | strength pushing all nodes away |
+| strengthPullToX | number | none | strength pulling all nodes to X coordination |
+| strengthPullToY | number | none | strength pulling all nodes to Y coordination |
+| strengthPullToZ | number | none | strength pulling all nodes to Z coordination |
+| strengthToBounceOtherAway | number | none | strength bouncing all nodes away |
+| textCSS | React component | none | pass into a react component as template to display a node|
+| textMesh | Three.js model | none | pass into a Three.js model as template to display a node|
 | data | JSON | none | the data to display, see below for detail |
 
 ## The format for data
 
-To display some data, should give constellation-3d a JSON object, the format 
-looks like below:
+To display some data, should give constellation-3d a JSON object, the format looks like below:
 
 ```js
     [
@@ -119,10 +117,9 @@ looks like below:
     ]
 ```
 description:
-
     name        : the name of this data node
     weight        : the weight of current node, range is [1-10]
-    children        : children array of this node
+    children        : children array
 
 
 
