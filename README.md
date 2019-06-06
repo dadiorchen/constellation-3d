@@ -1,13 +1,13 @@
 # constellation-3d
 constellation-3d is for data visualization, it looks like constellations in the 
-sky. [Demo](https://bl.ocks.org/deanchen2013/220cdbba695f61d421adcae6cb25b602) 
+sky. [Demo](https://bl.ocks.org/dadiorchen/220cdbba695f61d421adcae6cb25b602) 
 is here.
 
 # About this component
 I created constellation-3d because I use it to show my skills in 
 [my portfolio site](http://dadiorchen.com). Like this:
 
-[<img alt="snapshot" src="https://raw.githubusercontent.com/deanchen2013/constellation-3d/master/snapshort.png" width="420" height="219">](https://raw.githubusercontent.com/deanchen2013/constellation-3d/master/snapshort.png)
+[<img alt="snapshot" src="https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/snapshort.png" width="420" height="219">](https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/snapshort.png)
 
 I think it is suitable for displaying data in which the data nodes have a loose relationship,  such as all the hosts on the Internet, some of them have a connection with others, but some else haven't.  
 
