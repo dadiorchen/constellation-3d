@@ -19,11 +19,12 @@ It is based on [three.js](http://threejs.org) and
 # Features
 
 * 3D
+
 constellation-3d uses a 3d engine [three.js](http://threejs.org), that means you can view the data in 3d space.
 
 * Support HTML/CSS + JSX
-You can write HTML/CSS to change the appearance of constellation-3d. In order to let the user write HTML/CSS in js file, I use React 's JSX as a template engine, for more information about JSX, check document [here](https://reactjs.org/docs/introducing-jsx.html)
-So to define the appearance of the node in constellation-3d, the code is like this:
+
+You can write HTML/CSS to change the appearance of constellation-3d. In order to let the user write HTML/CSS in js file, I use React 's JSX as a template engine, for more information about JSX, check document [here](https://reactjs.org/docs/introducing-jsx.html). To define the appearance of nodes in constellation-3d, the code is like this:
 
 ```js
 <div
@@ -53,6 +54,12 @@ with HTML
 NOTE, to use constellation-3d in html file, you need to surround the js code with script tag which type is 'text/babel', thats because we need
 write JSX in code.
 
+```html
+<script type="text/babel">
+    ...
+</script>
+```
+
 # API
 Settings for behaver and appearance of the component:
 
@@ -65,8 +72,7 @@ Settings for behaver and appearance of the component:
 | backgroundPictureRepeatVertical | number | none | how many time the picture will be repeated in the vertical direction on the background |
 | lineColor | number | 0x000000 | the color of the line between two nodes |
 | lineDistance | number | 80 | the distance of the line between two nodes |
-| textType | 'CSS' \| 'THREE' | 'CSS' | if textType = 'CSS', use CSS+HTML to 
-render the nodes, if = 'THREE', use Three.js 3d model to render the nodes | 
+| textType | 'CSS' \| 'THREE' | 'CSS' | if textType = 'CSS', use CSS+HTML to render the nodes, if = 'THREE', use Three.js 3d model to render the nodes | 
 | width | number | none | the width of the component | 
 | height | number | none | the height of the component | 
 | isTextDirectionFixed | boolean | true | if true, the text of nodes will always keep facing to the camera |
@@ -82,17 +88,17 @@ render the nodes, if = 'THREE', use Three.js 3d model to render the nodes |
 | cameraObitPositionX | number | none | valid in orbit mode, indicates the x-axis coordinates of camera |
 | cameraObitPositionY | number | none | valid in orbit mode, indicates the y-axis coordinates of camera |
 | cameraObitPositionZ | number | none | valid in orbit mode, indicates the z-axis coordinates of camera |
-| cameraObitFrustmSize | number | none | in orbit mode, the nodes distance to camera, the bigger the number, the far away to the camera | 
+| cameraObitFrustmSize | number | none | in orbit mode, distance from nodes to camera | 
 | strengthPushAllAway | number | none | strength pushing all nodes away |
 | strengthPullToX | number | none | strength pulling all nodes to X coordination |
 | strengthPullToY | number | none | strength pulling all nodes to Y coordination |
 | strengthPullToZ | number | none | strength pulling all nodes to Z coordination |
 | strengthToBounceOtherAway | number | none | strength bouncing all nodes away |
-| textCSS | React component | none | pass into a react component as template to display a node|
-| textMesh | Three.js model | none | pass into a Three.js model as template to display a node|
+| textCSS | React component | none | pass into a react component as the template to display a node|
+| textMesh | Three.js model | none | pass into a Three.js model as the template to display a node|
 | data | JSON | none | the data to display, see below for detail |
 
-## The format for data
+## Data format
 
 To display some data, should give constellation-3d a JSON object, the format looks like below:
 
@@ -117,9 +123,12 @@ To display some data, should give constellation-3d a JSON object, the format loo
     ]
 ```
 description:
-    name        : the name of this data node
-    weight        : the weight of current node, range is [1-10]
-    children        : children array
+
+  name        : the name of this data node
+  
+  weight        : the weight of current node, range is [1-10]
+  
+  children        : children array
 
 
 
