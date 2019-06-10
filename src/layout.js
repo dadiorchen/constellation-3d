@@ -54,13 +54,13 @@ export function build(
 	let group		= 0
 	function goThrough(data : any, parent : any, level : number){
 		data.forEach((node : any) => {
-			const newNode		= {
+			const newNode		= Object.assign(node, {
 				index		: nodes.length,
 				name		: node.name,
 				weight		: node.weight,
 				level		: level,
 				group		: group,
-			}
+			})
 			nodes.push(newNode)
 			//link
 			if(parent){
