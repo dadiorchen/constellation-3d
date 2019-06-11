@@ -8,6 +8,7 @@ I created constellation-3d because I use it to show my skills in
 [my portfolio site](http://dadiorchen.com). Like this:
 
 [<img alt="snapshot" src="https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/snapshort.png" width="420" height="219">](https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/snapshort.png)
+[<img alt="3" src="https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/3.jpg" width="420" >](https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/3.jpg)
 
 I think it is suitable for displaying data in which the data nodes have a loose relationship,  such as all the hosts on the Internet, some of them have a connection with others, but some else haven't.  
 
