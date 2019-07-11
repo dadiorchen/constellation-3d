@@ -5,7 +5,7 @@ is here.
 
 # About this component
 I created constellation-3d because I use it to show my skills in 
-[my portfolio site](http://dadiorchen.com). Like this:
+[my portfolio site](http://dadiorchen.com) and my [partner's](http://tiheehoo.com). Like this:
 
 [<img alt="snapshot" src="https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/snapshort.png" width="420" height="219">](http://dadiorchen.com)
 [<img alt="3" src="https://raw.githubusercontent.com/dadiorchen/constellation-3d/master/3.jpg" width="420" >](http://tiheehoo.com)
